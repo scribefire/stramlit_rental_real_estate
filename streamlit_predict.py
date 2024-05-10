@@ -7,10 +7,10 @@ model = load("model_ridge.pkl")
 
 def user_input_features():
     house_area = st.sidebar.slider("面積(m2)", 0.0, 250.0, 30.0)
-    year_from_built = st.sidebar.slider("築年数(年)", 0.0, 60, 10.0)
+    year_from_built = st.sidebar.slider("築年数(年)", 0, 60, 10)
     distance = st.sidebar.slider("駅からの距離(m)", 1, 7000, 160)
-    balcony_area = st.sidebar.slider("バルコニーの面積(m2)", 0.0, 40.0, 30.0)
-    floor = st.sidebar.slider("部屋の階数(階)", 1, 37, 3)
+    balcony_area = st.sidebar.slider("バルコニーの面積(m2)", 0.0, 40.0, 10.0)
+    floor = st.sidebar.slider("部屋の階数(階)", 1, 37, 1)
     total_floor = st.sidebar.slider("建物の総階数(階)", 1, 47, 3)
 
     data = {
