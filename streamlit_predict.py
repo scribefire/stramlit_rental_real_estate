@@ -26,10 +26,27 @@ def user_input_features():
     return features
 
 
-st.write("# 不動産価格予測アプリ")
+st.write("# 不動産賃貸料予測")
+
+for _ in range(5):  # 5行の空白を追加
+    st.text("\n")
+
 
 input_df = user_input_features()
 
 price_pred = model.predict(input_df)
 
-st.write(f"## 予測結果: {int(price_pred[0])} (円)")
+
+st.write(f"## 使用モデル : Ridge regression ")
+
+st.write(f"## 予測結果 : {int(price_pred[0])} 円")
+
+
+for _ in range(25):  # 5行の空白を追加
+    st.text("\n")
+
+
+# st.text("※左のスライダーで選んだ数値を元に予測します。")
+# st.text("※本サイトは Streamlit を使用して作成されております。")
+# st.text("表示に関する細かい設定はできませんが、簡易的なダッシュボード作成には有用とされています。")
+# st.text("一般的なWebサイトほどに、表示に関する細かい設定はできません。。")
