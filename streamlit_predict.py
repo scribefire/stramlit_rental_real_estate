@@ -26,7 +26,7 @@ def user_input_features():
     return features
 
 
-st.write("# 不動産賃貸料予測")
+st.write("# 不動産賃料予測アプリ")
 
 for _ in range(5):  # 5行の空白を追加
     st.text("\n")
@@ -37,7 +37,7 @@ input_df = user_input_features()
 price_pred = model.predict(input_df)
 
 
-st.write(f"## 使用モデル : Ridge regression ")
+st.write(f"## 使用アルゴリズム : Ridge regression ")
 
 st.write(f"## 予測結果 : {int(price_pred[0])} 円")
 
