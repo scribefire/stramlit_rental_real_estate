@@ -26,7 +26,7 @@ def user_input_features():
     return features
 
 
-st.write("# 不動産賃料予測アプリ")
+st.write("# 不動産賃料推計アプリ")
 
 for _ in range(5):  # 5行の空白を追加
     st.text("\n")
