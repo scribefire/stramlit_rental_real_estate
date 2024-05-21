@@ -6,9 +6,7 @@ from joblib import load
 model = load("model_LightGBM.pkl")
 
 # データの読み込み
-df = pd.read_csv(
-    "/Users/pro/Library/CloudStorage/GoogleDrive-mkinjo@milize.co.jp/マイドライブ/現在進行案件/賃貸不動産価格予測/LightGBM/summo_Pretreated_20240521.csv"
-)
+df = pd.read_csv("./summo_Pretreated_20240521.csv")
 
 # カテゴリ変数の列名をリストで指定
 categorical_features = ["住所", "間取り", "市区町村", "駅"]
